@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
                 </h2>
 
                 <nav className="flex-1 flex justify-center space-x-6 mb-4 md:mb-0">
-                    <Link href="/" className="hover:text-[#E2D609] text-lg transition-colors duration-300">Home</Link>
-                    <Link href="/movies" className="hover:text-[#E2D609] text-lg transition-colors duration-300">Movies</Link>
+                    <Link href="/moves" className="hover:text-[#E2D609] text-lg transition-colors duration-300">Home</Link>
+                    <Link href="/moves" className="hover:text-[#E2D609] text-lg transition-colors duration-300">Movies</Link>
                     <Link href="/contact" className="hover:text-[#E2D609] text-lg transition-colors duration-300">Contact</Link>
                     <Link href="/privacy" className="hover:text-[#E2D609] text-lg transition-colors duration-300">Privacy Policy</Link>
                 </nav>
