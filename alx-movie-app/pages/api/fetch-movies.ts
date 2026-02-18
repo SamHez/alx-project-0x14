@@ -16,7 +16,12 @@ export default async function handler(request: NextApiRequest, response: NextApi
             }
         );
 
-        if (!resp.ok) throw new Error("Failed to fetch movies");
+        if (!resp.ok) {
+            console.error(`API Error: ${resp.status} ${resp.statusText}`);
+            const errorData = await resp.json().catch(() => ({}));
+            console.error('Error Details:', errorData);
+            throw new Error(`Failed to fetch movies: ${resp.status} ${resp.statusText}`);
+        }
 
         const moviesResponse = await resp.json();
         const movies: MoviesProps[] = moviesResponse.results;
